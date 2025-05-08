@@ -2,35 +2,13 @@
 
 The JCBreadcrumb component provides navigation context by showing the current location within a navigational hierarchy.
 
-## Props
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| items | BreadcrumbItem[] | [...] | Array of breadcrumb items |
-| border | boolean | false | Adds border and shadow to breadcrumb |
-
-## Types
-
-```typescript
-type BreadcrumbItem = {
-  content: string;   // Text content
-  href?: string;     // Optional link URL
-  target?: string;   // Optional link target
-}
-```
-
-## Features
-
-- Automatic chevron separators
-- Support for both links and text items
-- Dark mode support
-- Optional bordered style
-- HTML content support in items
-- Customizable link targets
-
-## Example
+## Basic Usage
 
 ```svelte
+<script>
+  import JCBreadcrumb from '$lib/Element/Breadcrumb/JCBreadcrumb.svelte';
+</script>
+
 <JCBreadcrumb
   items={[
     { content: 'Home', href: '/' },
@@ -41,10 +19,18 @@ type BreadcrumbItem = {
 />
 ```
 
-## Styling
+## Props
 
-- Active links: Blue with hover state
-- Current item: Gray text
-- Separators: Gray chevron icons
-- Optional border and shadow
-- Responsive layout 
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| items | BreadcrumbItem[] | [...] | Array of breadcrumb items |
+| border | boolean | false | Adds border and shadow to breadcrumb |
+
+## Features
+
+- Automatic chevron separators
+- Support for both links and text items
+- Dark mode support
+- Optional bordered style
+- HTML content support in items
+- Customizable link targets

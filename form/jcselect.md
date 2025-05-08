@@ -6,7 +6,7 @@
 
 ```html
 <script>
-  import { JCSelect } from '@lib/Form/Select';
+  import JCSelect from '@lib/Form/Select/JCSelect.svelte';
   
   let value = '';
   let options = [
@@ -94,7 +94,7 @@
 | `disabled` | `boolean` | false | Disable the select |
 | `required` | `boolean` | false | Make the select required |
 | `error` | `string` | undefined | Error message |
-| `size` | `string` | 'base' | Select size ('sm', 'base', 'lg') |
+| `size` | `string` | 'base' | Select size ('sm', 'md', 'base', 'lg') |
 | `clearable` | `boolean` | false | Show clear button |
 
 ### Events
@@ -127,64 +127,6 @@
 - 📱 Mobile friendly
 - 🌙 Dark mode support
 
-## Styling
-
-### Default Styles
-
-```css
-/* Base select styles */
-.jc-select {
-  @apply relative w-full;
-}
-
-/* Select trigger */
-.jc-select__trigger {
-  @apply w-full rounded-md border border-gray-300;
-  @apply bg-white dark:bg-gray-700;
-  @apply focus:ring-2 focus:ring-primary-500;
-}
-
-/* Options container */
-.jc-select__options {
-  @apply absolute w-full mt-1 bg-white rounded-md shadow-lg;
-  @apply dark:bg-gray-700 dark:border dark:border-gray-600;
-  @apply max-h-60 overflow-auto z-50;
-}
-
-/* Option item */
-.jc-select__option {
-  @apply px-4 py-2 cursor-pointer;
-  @apply hover:bg-gray-100 dark:hover:bg-gray-600;
-}
-
-/* Selected option */
-.jc-select__option--selected {
-  @apply bg-primary-50 text-primary-900;
-  @apply dark:bg-primary-900/20 dark:text-primary-100;
-}
-
-/* Group header */
-.jc-select__group-header {
-  @apply px-4 py-2 text-sm font-medium text-gray-700;
-  @apply dark:text-gray-300;
-}
-
-/* Search input */
-.jc-select__search {
-  @apply w-full px-4 py-2 border-b;
-  @apply dark:bg-gray-700 dark:border-gray-600;
-}
-```
-
-### Customization
-
-You can customize the appearance using:
-- Different sizes through the `size` prop
-- Custom option templates
-- Custom selected value display
-- Group header styling
-- Search input styling
-- Dark mode support
 
 ## Accessibility
 

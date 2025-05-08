@@ -6,7 +6,7 @@
 
 ```html
 <script>
-  import { JCFileUpload } from '@lib/Form/FileUpload';
+  import JCFileUpload from '@lib/Form/FileUpload/JCFileUpload.svelte';
   
   let files = [];
   

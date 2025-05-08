@@ -94,41 +94,6 @@
 - ♿ Accessibility support
 - 🌙 Dark mode compatibility
 
-## Styling
-
-### Default Styles
-
-```css
-/* Base checkbox styles */
-.jc-checkbox {
-  @apply relative inline-flex items-center;
-}
-
-/* Checkbox input */
-.jc-checkbox__input {
-  @apply w-4 h-4 text-primary-600 rounded;
-  @apply border-gray-300 focus:ring-primary-500;
-  @apply dark:border-gray-600 dark:bg-gray-700;
-}
-
-/* Size variants */
-.jc-checkbox--sm { @apply text-sm; }
-.jc-checkbox--base { @apply text-base; }
-.jc-checkbox--lg { @apply text-lg; }
-
-/* Disabled state */
-.jc-checkbox--disabled {
-  @apply opacity-50 cursor-not-allowed;
-}
-```
-
-### Customization
-
-You can customize the appearance using:
-- Different sizes through the `size` prop
-- Custom styles through Tailwind classes
-- Dark mode support
-- Group layout options
 
 ## Accessibility
 

@@ -6,7 +6,7 @@
 
 ```html
 <script>
-  import { JCInputField } from '@lib/Form/InputField';
+  import { JCInputField } from '@lib/Form/InputField/JCInputField.svelte';
   let value = '';
 </script>
 
@@ -88,7 +88,7 @@
 | `helperText` | `string` | undefined | Helper text |
 | `leftIcon` | `string` | undefined | Icon to show on the left |
 | `rightIcon` | `string` | undefined | Icon to show on the right |
-| `size` | `string` | 'base' | Input size ('sm', 'base', 'lg') |
+| `size` | `string` | 'base' | Input size ('sm', 'base', 'md', 'lg') |
 
 ### Events
 

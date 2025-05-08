@@ -6,7 +6,7 @@
 
 ```html
 <script>
-  import { JCCheckbox } from '@lib/Form/Checkbox';
+  import { JCCheckbox } from '@lib/Form/Checkbox.svelte';
   let checked = false;
 </script>
 
@@ -56,9 +56,7 @@
 </JCCheckbox.Group>
 ```
 
-## API
-
-### Props
+## Props
 
 | Name | Type | Default | Description |
 |------|------|---------|-------------|
@@ -70,7 +68,7 @@
 | `name` | `string` | undefined | Name attribute for the input element |
 | `required` | `boolean` | false | Whether the checkbox is required |
 
-### Events
+## Events
 
 | Name | Description |
 |------|-------------|
@@ -78,7 +76,7 @@
 | `focus` | Fired when checkbox receives focus |
 | `blur` | Fired when checkbox loses focus |
 
-### Slots
+## Slots
 
 | Name | Description |
 |------|-------------|

@@ -7,7 +7,8 @@
 ```html
 <!-- Import components -->
 <script>
-  import { JCList, JCListItem } from '@lib/Element/List';
+  import JCList from '$lib/Element/List/JCList.svelte';
+  import JCListItem from '$lib/Element/List/JCListItem.svelte';
 </script>
 
 <!-- Basic unordered list -->
@@ -79,43 +80,3 @@ The list component includes several built-in features:
 - ♿ Accessible with proper ARIA roles
 - 🔄 Flexible content structure through slots
 
-## Styling
-
-### Default Styles
-
-The component includes these default features:
-
-- ⭕ Rounded corners
-- 📏 Proper spacing between items
-- 📜 Custom scrollbar styling
-- 🌙 Dark mode compatibility
-- ⚡ Overflow handling
-
-### CSS Classes
-
-The component applies these Tailwind CSS classes by default:
-
-```css
-/* Base list styles */
-.jc-list-group {
-  @apply rounded-md space-y-4 py-4 overflow-y-auto overflow-x-hidden;
-}
-
-/* Dark mode styles */
-.dark .jc-list-group {
-  @apply bg-gray-800 text-gray-200;
-}
-
-/* Custom scrollbar */
-.jc-beauty-scrollbar {
-  @apply scrollbar-thin scrollbar-thumb-gray-400 dark:scrollbar-thumb-gray-600;
-}
-```
-
-### Customization
-
-You can customize the appearance using:
-- The `tag` prop for list type
-- Additional Tailwind classes through the class prop
-- Dark mode styles are automatically applied
-- Custom scrollbar styling through the `.jc-beauty-scrollbar` class 

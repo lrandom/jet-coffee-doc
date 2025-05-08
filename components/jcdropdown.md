@@ -7,7 +7,8 @@
 ```html
 <!-- Import components -->
 <script>
-  import { JCDropdown, JCDropdownItem } from '@lib/Element/Dropdown';
+  import JCDropdown from '@lib/Element/Dropdown/JCDropdown.svelte';
+  import JCDropdownItem from '@lib/Element/Dropdown/JCDropdownItem.svelte';
 </script>
 
 <!-- Basic usage -->
@@ -85,34 +86,3 @@ The dropdown component includes several built-in features:
 - 🖱️ Click outside to close
 - 🎯 Custom trigger elements
 - 🎨 Customizable styling through Tailwind classes
-
-## Styling
-
-### CSS Classes
-
-The component applies these Tailwind CSS classes by default:
-
-```css
-/* Base dropdown styles */
-.jc-dropdown {
-  @apply relative;
-}
-
-/* Dropdown content wrapper */
-.jc-dropdown-content {
-  @apply absolute min-w-[10rem] w-fit bg-white dark:bg-gray-800 rounded-md shadow-md overflow-hidden z-50;
-}
-
-/* Dark mode border */
-.dark .jc-dropdown-content {
-  @apply border border-gray-700;
-}
-```
-
-### Customization
-
-You can customize the appearance using:
-- Custom trigger elements through the default slot
-- Additional Tailwind classes through the class prop
-- Dark mode styles are automatically applied
-- Position customization through the `position` prop 

@@ -6,7 +6,7 @@
 
 ```html
 <script>
-  import { JCSlider } from '@lib/Form/Slider';
+  import JCSlider from '@lib/Form/Slider/JCSlider.svelte';
   let value = 50;
 </script>
 
@@ -117,65 +117,6 @@
 - ⌨️ Keyboard support
 - 🌙 Dark mode support
 
-## Styling
-
-### Default Styles
-
-```css
-/* Base slider styles */
-.jc-slider {
-  @apply relative w-full h-2;
-}
-
-/* Track styles */
-.jc-slider__track {
-  @apply absolute h-2 rounded-full bg-gray-200;
-  @apply dark:bg-gray-700;
-}
-
-/* Track fill */
-.jc-slider__track-fill {
-  @apply absolute h-full rounded-full bg-primary-500;
-  @apply dark:bg-primary-400;
-}
-
-/* Thumb styles */
-.jc-slider__thumb {
-  @apply absolute w-4 h-4 rounded-full bg-white border-2;
-  @apply border-primary-500 dark:border-primary-400;
-  @apply focus:ring-2 focus:ring-primary-500;
-  @apply -translate-x-1/2 top-1/2 -translate-y-1/2;
-}
-
-/* Tick marks */
-.jc-slider__tick {
-  @apply absolute w-1 h-1 rounded-full bg-gray-300;
-  @apply dark:bg-gray-600;
-  @apply -translate-x-1/2 top-full mt-1;
-}
-
-/* Mark labels */
-.jc-slider__mark {
-  @apply absolute text-xs text-gray-600;
-  @apply dark:text-gray-400;
-  @apply -translate-x-1/2 top-full mt-4;
-}
-
-/* Disabled state */
-.jc-slider--disabled {
-  @apply opacity-50 cursor-not-allowed;
-}
-```
-
-### Customization
-
-You can customize the appearance using:
-- Different colors through the `color` prop
-- Custom thumb and mark templates
-- Label formatting
-- Track and thumb styling
-- Dark mode support
-- Custom mark positions
 
 ## Accessibility
 

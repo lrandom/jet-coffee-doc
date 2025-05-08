@@ -6,7 +6,7 @@
 
 ```html
 <script>
-  import { JCSwitch } from '@lib/Form/Switch';
+  import JCSwitch from '@lib/Form/Switch/JCSwitch.svelte';
   let checked = false;
 </script>
 
@@ -91,76 +91,6 @@
 - ♿ Accessibility features
 - 📱 Touch friendly
 
-## Styling
-
-### Default Styles
-
-```css
-/* Base switch styles */
-.jc-switch {
-  @apply relative inline-flex items-center;
-}
-
-/* Switch track */
-.jc-switch__track {
-  @apply w-11 h-6 bg-gray-200 rounded-full;
-  @apply dark:bg-gray-700;
-  @apply transition-colors duration-200;
-}
-
-/* Switch thumb */
-.jc-switch__thumb {
-  @apply absolute w-5 h-5 bg-white rounded-full;
-  @apply transform transition-transform duration-200;
-  @apply shadow-sm;
-}
-
-/* Checked state */
-.jc-switch--checked .jc-switch__track {
-  @apply bg-primary-500;
-}
-
-.jc-switch--checked .jc-switch__thumb {
-  @apply translate-x-5;
-}
-
-/* Size variants */
-.jc-switch--sm {
-  .jc-switch__track { @apply w-8 h-4; }
-  .jc-switch__thumb { @apply w-3 h-3; }
-}
-
-.jc-switch--lg {
-  .jc-switch__track { @apply w-14 h-8; }
-  .jc-switch__thumb { @apply w-7 h-7; }
-}
-
-/* Color variants */
-.jc-switch--success .jc-switch__track { @apply bg-success-500; }
-.jc-switch--warning .jc-switch__track { @apply bg-warning-500; }
-.jc-switch--danger .jc-switch__track { @apply bg-danger-500; }
-
-/* Disabled state */
-.jc-switch--disabled {
-  @apply opacity-50 cursor-not-allowed;
-}
-
-/* Focus state */
-.jc-switch:focus-within .jc-switch__track {
-  @apply ring-2 ring-offset-2 ring-primary-500;
-}
-```
-
-### Customization
-
-You can customize the appearance using:
-- Different sizes through the `size` prop
-- Color themes through the `color` prop
-- Custom icons in slots
-- Dark mode support
-- Track and thumb styling
-- Animation timing
-- Focus styles
 
 ## Accessibility
 

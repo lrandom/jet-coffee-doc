@@ -6,7 +6,7 @@
 
 ```html
 <script>
-  import { JCSlider } from '@lib/Form/Slider';
+  import { JCSlider } from '@lib/Form/Slider/JCSlider.svelte';
   let value = 50;
 </script>
 

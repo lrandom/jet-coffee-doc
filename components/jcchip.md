@@ -7,7 +7,7 @@
 ```html
 <!-- Import component -->
 <script>
-  import { JCChip } from '@lib/Element/Chip/JCChip.svelte';
+  import JCChip from '@lib/Element/Chip/JCChip.svelte';
 </script>
 
 <!-- Basic usage -->
@@ -67,30 +67,3 @@
 </JCChip>
 ```
 
-## Styling
-
-The component uses Tailwind CSS classes for styling and includes:
-
-- Built-in dark mode support
-- Customizable through Tailwind classes
-- Color variants through the `type` prop
-- Visual styles through the `variant` prop
-- Size variations
-- Custom colors via the `color` prop
-
-### CSS Classes
-
-The component applies these Tailwind CSS classes by default:
-
-```css
-/* Base styles */
-.jc-chip {
-  @apply inline-flex items-center font-medium;
-}
-
-/* Size variants */
-.jc-chip-xs { @apply px-2 py-0.5 text-xs; }
-.jc-chip-sm { @apply px-2 py-0.5 text-sm; }
-.jc-chip-base { @apply px-4 py-1 text-base; }
-.jc-chip-lg { @apply px-6 py-2 text-lg; }
-``` 

@@ -7,8 +7,7 @@
 ```html
 <!-- Import component -->
 <script>
-  import { JCPagination } from '@lib/Element/Pagination';
-  
+  import JCPagination from '@lib/Element/Pagination/JCPagination';
   let currentPage = 1;
 </script>
 
@@ -83,54 +82,3 @@ The pagination component includes several built-in features:
 - ⌨️ Keyboard navigation
 - 🔄 Automatic overflow handling
 - 🌙 Dark mode support
-
-## Events
-
-The component emits events in the following scenarios:
-
-- 🔄 Page changes
-- ⬅️ Previous button clicked
-- ➡️ Next button clicked
-- 🎯 Page item clicked
-
-## Styling
-
-### Default Styles
-
-The component uses Tailwind CSS for styling and includes:
-
-- 🖱️ Hover and focus states
-- 🎯 Active page highlighting
-- ⚡ Disabled state styling
-- 🌙 Dark mode compatibility
-- 📱 Responsive design
-
-### CSS Classes
-
-```css
-/* Base pagination styles */
-.jc-pagination {
-  @apply inline-flex items-center space-x-2 rounded-md overflow-hidden;
-}
-
-/* Pagination item */
-.jc-pagination__item {
-  @apply flex items-center justify-center cursor-pointer;
-  @apply hover:bg-gray-100 dark:hover:bg-gray-700;
-  @apply focus:outline-none focus:ring-2 focus:ring-primary-500;
-}
-
-/* Disabled state */
-.jc-pagination__item--disabled {
-  @apply opacity-50 cursor-not-allowed;
-}
-```
-
-### Customization
-
-You can customize the appearance using:
-- The `activeClass` prop for active page styling
-- Additional Tailwind classes through the class prop
-- Shape variants through the `shape` prop
-- Size variants through the `size` prop
-- Dark mode styles are automatically applied 

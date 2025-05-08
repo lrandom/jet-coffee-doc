@@ -6,7 +6,7 @@
 
 ```html
 <script>
-  import { JCTooltip } from '@lib/Element/Tooltip';
+  import JCTooltip from '@lib/Element/Tooltip/JCTooltip.svelte';
 </script>
 
 <!-- Basic usage -->
@@ -18,7 +18,6 @@
 ## Examples
 
 ### Different Positions
-
 ```html
 <JCTooltip content="Top tooltip" position="top">
   <button>Hover for top tooltip</button>
@@ -101,82 +100,3 @@ The tooltip component includes several built-in features:
 - ⌨️ Keyboard accessibility
 - 📱 Mobile-friendly
 
-## Styling
-
-### Default Styles
-
-The component uses Tailwind CSS for styling and includes:
-
-- 🎨 Clean, modern design
-- ✨ Smooth fade transitions
-- 📏 Proper spacing and padding
-- 🎯 Arrow indicators
-- 🌙 Dark mode compatibility
-
-### CSS Classes
-
-```css
-/* Base tooltip styles */
-.jc-tooltip {
-  @apply absolute z-50 px-3 py-2 text-sm;
-  @apply bg-gray-900 text-white rounded-md shadow-lg;
-  @apply dark:bg-gray-700 dark:text-white;
-}
-
-/* Arrow styles */
-.jc-tooltip-arrow {
-  @apply absolute w-2 h-2 bg-gray-900;
-  @apply dark:bg-gray-700;
-  transform: rotate(45deg);
-}
-
-/* Tooltip positions */
-.jc-tooltip--top {
-  @apply -translate-y-2;
-}
-
-.jc-tooltip--bottom {
-  @apply translate-y-2;
-}
-
-.jc-tooltip--left {
-  @apply -translate-x-2;
-}
-
-.jc-tooltip--right {
-  @apply translate-x-2;
-}
-
-/* Fade animation */
-.jc-tooltip-fade-enter-active,
-.jc-tooltip-fade-leave-active {
-  @apply transition-opacity duration-200;
-}
-
-.jc-tooltip-fade-enter-from,
-.jc-tooltip-fade-leave-to {
-  @apply opacity-0;
-}
-```
-
-### Customization
-
-You can customize the appearance using:
-- Different positions through the `position` prop
-- Custom width with the `width` prop
-- Rich HTML content through slots
-- Custom styling through Tailwind classes
-- Dark mode support
-- Arrow visibility toggle
-- Offset adjustment
-
-## Accessibility
-
-The tooltip component follows accessibility best practices:
-
-- Uses appropriate ARIA attributes (`aria-describedby`)
-- Keyboard navigation support
-- Screen reader friendly
-- Focus management
-- Role attributes
-- Proper contrast ratios 

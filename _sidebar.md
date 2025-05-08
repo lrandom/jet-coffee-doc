@@ -10,6 +10,7 @@
   * [File Upload](form/jcfileupload.md)
 * Components
   * [Button](components/jcbutton.md)
+  * [ButtonGroup](components/jcbuttongroup.md)
   * [Alert](components/jcalert.md)
   * [Avatar](components/jcavatar.md)
   * [Badge](components/jcbadge.md)

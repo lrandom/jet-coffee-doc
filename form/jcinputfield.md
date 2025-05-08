@@ -6,7 +6,7 @@
 
 ```html
 <script>
-  import { JCInputField } from '@lib/Form/InputField';
+  import JCInputField from '$lib/Form/InputField/JCInputField.svelte';
   let value = '';
 </script>
 
@@ -71,7 +71,49 @@
 />
 ```
 
-## API
+### With Prefix
+
+```html
+<JCInputField
+  label="Price"
+  prefix="$"
+  type="number"
+  placeholder="0.00"
+/>
+
+<JCInputField
+  label="Website"
+  prefix="https://"
+  placeholder="example.com"
+/>
+```
+
+### With Slot Prefix/Suffix
+
+```html
+<JCInputField label="Currency" prefix={true} suffix={true}>
+		<svelte:fragment slot="prefix">
+		  <select class="border-none bg-transparent pr-1">
+			<option>$</option>
+			<option>€</option>
+			<option>£</option>
+		  </select>
+		</svelte:fragment>
+		<svelte:fragment slot="suffix">
+		  <span class="text-gray-500">USD</span>
+		</svelte:fragment>
+	  </JCInputField>
+	  
+	  <JCInputField label="Weight" suffix={true}>
+		<div slot="suffix" class="flex items-center">
+		  <select class="border-none bg-transparent">
+			<option>kg</option>
+			<option>lb</option>
+			<option>g</option>
+		  </select>
+		</div>
+	  </JCInputField>
+```
 
 ### Props
 
@@ -88,6 +130,8 @@
 | `helperText` | `string` | undefined | Helper text |
 | `leftIcon` | `string` | undefined | Icon to show on the left |
 | `rightIcon` | `string` | undefined | Icon to show on the right |
+| `prefix` | `string` | undefined | Text prefix displayed before the input value |
+| `suffix` | `string` | undefined | Text suffix displayed after the input value |
 | `size` | `string` | 'base' | Input size ('sm', 'base', 'lg') |
 
 ### Events
@@ -105,6 +149,8 @@
 |------|-------------|
 | leftIcon | Custom left icon content |
 | rightIcon | Custom right icon content |
+| prefix | Custom prefix content |
+| suffix | Custom suffix content |
 | error | Custom error message content |
 | helper | Custom helper text content |
 
@@ -119,57 +165,6 @@
 - 📱 Responsive design
 - 🌙 Dark mode support
 
-## Styling
-
-### Default Styles
-
-```css
-/* Base input styles */
-.jc-input {
-  @apply w-full rounded-md border-gray-300;
-  @apply focus:ring-primary-500 focus:border-primary-500;
-  @apply dark:bg-gray-700 dark:border-gray-600;
-}
-
-/* Label styles */
-.jc-input__label {
-  @apply block text-sm font-medium text-gray-700;
-  @apply dark:text-gray-200;
-}
-
-/* Error state */
-.jc-input--error {
-  @apply border-red-500;
-  @apply focus:ring-red-500 focus:border-red-500;
-}
-
-/* Helper text */
-.jc-input__helper {
-  @apply mt-1 text-sm text-gray-500;
-  @apply dark:text-gray-400;
-}
-
-/* Error message */
-.jc-input__error {
-  @apply mt-1 text-sm text-red-500;
-}
-
-/* Icon container */
-.jc-input__icon {
-  @apply absolute inset-y-0 flex items-center;
-  @apply text-gray-400 dark:text-gray-500;
-}
-```
-
-### Customization
-
-You can customize the appearance using:
-- Different input types
-- Custom icons through slots
-- Error and helper text styling
-- Size variants
-- Dark mode support
-- Custom Tailwind classes
 
 ## Accessibility
 

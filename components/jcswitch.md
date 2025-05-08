@@ -6,7 +6,7 @@
 
 ```html
 <script>
-  import { JCSwitch } from '@lib/Form/Switch';
+  import { JCSwitch } from '@lib/Form/Switch/JCSwitch.svelte';
   let checked = false;
 </script>
 

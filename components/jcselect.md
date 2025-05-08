@@ -6,7 +6,7 @@
 
 ```html
 <script>
-  import { JCSelect } from '@lib/Form/Select';
+  import { JCSelect } from '@lib/Form/Select/JCSelect.svelte';
   
   let value = '';
   let options = [

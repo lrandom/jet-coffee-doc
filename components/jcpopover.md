@@ -7,7 +7,7 @@
 ```html
 <!-- Import component -->
 <script>
-  import { JCPopover } from '@lib/Element/Popover';
+  import JCPopover from '$lib/Element/Popover/JCPopover.svelte';
 </script>
 
 <!-- Basic usage -->
@@ -85,54 +85,3 @@ The popover component includes several built-in features:
 - ⌨️ Keyboard navigation (Escape to close)
 - 🌙 Dark mode support
 
-## Styling
-
-### Default Styles
-
-The component uses Tailwind CSS for styling and includes:
-
-- 🎨 Clean, modern design
-- ✨ Smooth transitions
-- 📏 Proper spacing and padding
-- 🌫️ Shadow effects
-- 🎯 Border styling
-- 🌙 Dark mode compatibility
-
-### CSS Classes
-
-```css
-/* Base popover styles */
-.jc-popover {
-  @apply absolute bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.1)] border border-gray-100;
-  backdrop-filter: blur(8px);
-}
-
-/* Dark mode styles */
-.dark .jc-popover {
-  @apply bg-gray-800 border-gray-700;
-}
-
-/* Arrow styles */
-.popover-arrow {
-  @apply absolute w-4 h-4 bg-white border border-gray-100;
-  box-shadow: -2px -2px 4px rgba(0,0,0,0.03);
-}
-```
-
-### Customization Options
-
-You can customize the appearance using:
-- Width through the `width` prop
-- Custom content through slots
-- Additional Tailwind classes
-- Arrow positioning and styling
-- Background blur effect
-
-## Accessibility
-
-The component includes several accessibility features:
-
-- ♿ Proper ARIA attributes
-- ⌨️ Keyboard navigation support
-- 🔍 Focus management
-- 📢 Screen reader friendly structure 

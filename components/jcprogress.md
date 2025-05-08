@@ -7,7 +7,7 @@
 ```html
 <!-- Import component -->
 <script>
-  import { JCProgress } from '@lib/Element/Progress';
+  import JCProgress from '@lib/Element/Progress/JCProgress.svelte';
 </script>
 
 <!-- Basic usage -->
@@ -93,48 +93,3 @@ The progress component includes several built-in features:
 - 📝 Custom label text
 - ✨ Smooth transitions
 
-## Styling
-
-### Default Styles
-
-The component uses Tailwind CSS for styling and includes:
-
-- 🎨 Clean, modern design
-- 📏 Proper spacing and padding
-- ⭕ Rounded corners
-- 🌙 Dark mode compatibility
-- 🎯 Custom color support
-
-### CSS Classes
-
-```css
-/* Base progress styles */
-.jc-progress {
-  @apply relative bg-gray-200 dark:bg-gray-700 overflow-hidden w-full;
-}
-
-/* Size variants */
-.jc-progress-xs { @apply h-2 rounded-xl; }
-.jc-progress-sm { @apply h-3 rounded-xl; }
-.jc-progress-base { @apply h-4 rounded-xl; }
-.jc-progress-lg { @apply h-5 rounded-xl; }
-
-/* Label styles */
-.jc-progress-label {
-  @apply absolute inset-0 flex items-center px-2;
-}
-
-/* Dark mode bar */
-.dark .jc-progress-bar {
-  @apply bg-primary dark:bg-primary;
-}
-```
-
-### Customization
-
-You can customize the appearance using:
-- The `type` prop for predefined colors
-- The `color` prop for custom colors
-- The `labelColor` prop for label styling
-- Additional Tailwind classes through the class prop
-- Label positioning through the `labelPosition` prop 

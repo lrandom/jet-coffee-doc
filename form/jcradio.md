@@ -6,7 +6,7 @@
 
 ```html
 <script>
-  import { JCRadio } from '@lib/Form/Radio';
+  import JCRadio from '@lib/Form/Radio/JCRadio.svelte';
   let selected = 'option1';
 </script>
 
@@ -107,69 +107,6 @@
 - ♿ Accessibility features
 - 📱 Touch friendly
 
-## Styling
-
-### Default Styles
-
-```css
-/* Base radio styles */
-.jc-radio {
-  @apply relative inline-flex items-center;
-}
-
-/* Radio input */
-.jc-radio__input {
-  @apply w-4 h-4 text-primary-600;
-  @apply border-gray-300 focus:ring-primary-500;
-  @apply dark:border-gray-600 dark:bg-gray-700;
-}
-
-/* Size variants */
-.jc-radio--sm {
-  @apply text-sm;
-  .jc-radio__input { @apply w-3 h-3; }
-}
-
-.jc-radio--lg {
-  @apply text-lg;
-  .jc-radio__input { @apply w-5 h-5; }
-}
-
-/* Color variants */
-.jc-radio--primary .jc-radio__input { @apply text-primary-500; }
-.jc-radio--success .jc-radio__input { @apply text-success-500; }
-.jc-radio--warning .jc-radio__input { @apply text-warning-500; }
-.jc-radio--danger .jc-radio__input { @apply text-danger-500; }
-
-/* Disabled state */
-.jc-radio--disabled {
-  @apply opacity-50 cursor-not-allowed;
-}
-
-/* Focus state */
-.jc-radio__input:focus {
-  @apply ring-2 ring-offset-2;
-}
-
-/* Radio group */
-.jc-radio-group {
-  @apply space-y-2;
-}
-
-.jc-radio-group--horizontal {
-  @apply flex space-x-4 space-y-0;
-}
-```
-
-### Customization
-
-You can customize the appearance using:
-- Different sizes through the `size` prop
-- Color themes through the `color` prop
-- Custom styles through Tailwind classes
-- Group layout options
-- Dark mode support
-- Focus styles
 
 ## Accessibility
 

@@ -7,7 +7,8 @@
 ```html
 <!-- Import components -->
 <script>
-  import { JCTabs, JCTabItem } from '@lib/Element/Tab';
+  import JCTabs from '@lib/Element/Tab';
+  import JCTabItem from '@lib/Element/Tab';
 </script>
 
 <!-- Basic usage -->
@@ -54,6 +55,41 @@
 </JCTabs>
 ```
 
+### Using JCTabContent Component
+
+```html
+<script>
+  import JCTabs from '@lib/Element/Tab/JCTabs.svelte';
+  import JCTabItem from '@lib/Element/Tab/JCTabItem.svelte';
+  import JCTabContent from '@lib/Element/Tab/JCTabContent.svelte';
+</script>
+
+<JCTabs separated>
+  <svelte:fragment slot="items">
+    <JCTabItem id="tab1" label="First Tab" />
+    <JCTabItem id="tab2" label="Second Tab" />
+    <JCTabItem id="tab3" label="Third Tab" />
+  </svelte:fragment>
+  
+  <svelte:fragment slot="content">
+    <JCTabContent id="tab1">
+      <h3>Content for First Tab</h3>
+      <p>This content is shown when the first tab is active.</p>
+    </JCTabContent>
+    
+    <JCTabContent id="tab2">
+      <h3>Content for Second Tab</h3>
+      <p>This content is shown when the second tab is active.</p>
+    </JCTabContent>
+    
+    <JCTabContent id="tab3">
+      <h3>Content for Third Tab</h3>
+      <p>This content is shown when the third tab is active.</p>
+    </JCTabContent>
+  </svelte:fragment>
+</JCTabs>
+```
+
 ### Programmatic Control
 
 ```html
@@ -91,6 +127,12 @@
 | `label` | `string` | - | Label text for the tab |
 | `id` | `string` | - | Unique identifier for the tab |
 
+#### JCTabContent Props
+
+| Name | Type | Default | Description |
+|------|------|---------|-------------|
+| `id` | `string` | - | Unique identifier matching a tab item |
+
 ### Slots
 
 #### JCTabs Slots
@@ -106,6 +148,12 @@
 | Name | Description |
 |------|-------------|
 | default | Content for the tab panel |
+
+#### JCTabContent Slots
+
+| Name | Description |
+|------|-------------|
+| default | Content to show when the associated tab is active |
 
 ### Methods
 
@@ -125,64 +173,4 @@ The tabs component includes several built-in features:
 - 📱 Touch swipe support
 - ⌨️ Keyboard navigation
 - ♾️ Automatic overflow handling
-- 🌙 Dark mode support
-
-## Styling
-
-### Default Styles
-
-The component uses Tailwind CSS for styling and includes:
-
-- 🎨 Clean, modern design
-- ✨ Smooth transitions
-- 📏 Proper spacing and padding
-- 🎯 Active tab indicators
-- 🌙 Dark mode compatibility
-- 📱 Mobile-responsive layout
-
-### CSS Classes
-
-```css
-/* Base tab styles */
-.jc-tab {
-  @apply bg-white dark:bg-gray-800 rounded-lg;
-}
-
-/* Tab navigation */
-.jc-tab-nav {
-  @apply flex items-center space-x-2 px-4 py-2;
-}
-
-/* Tab item */
-.jc-tab-item {
-  @apply px-4 py-2 rounded-md cursor-pointer;
-  @apply hover:bg-gray-100 dark:hover:bg-gray-700;
-}
-
-/* Active tab */
-.jc-tab-item--active {
-  @apply bg-primary text-white;
-  @apply dark:bg-primary dark:text-white;
-}
-
-/* Tab content */
-.jc-tab-content {
-  @apply p-4;
-}
-
-/* Pill variant */
-.jc-tab--pill {
-  @apply bg-gray-50 dark:bg-gray-700;
-}
-```
-
-### Customization
-
-You can customize the appearance using:
-- Different tab types through the `type` prop
-- Full width tabs with `fullTab`
-- Custom styling through Tailwind classes
-- Separated content layout
-- Custom tab content through slots
-- Mobile-responsive behavior
-- Touch gesture support 
+- �� Dark mode support
